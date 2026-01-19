@@ -26,7 +26,12 @@ final class ScheduleViewModel: ObservableObject {
             // print("Загружено пар: \(lessons.count)")
         } catch {
             // print("Ошибка загрузки: \(error.localizedDescription)")
-            errorText = "Network error"
+            errorText = "Used cached data"
+            do {
+                lessons = try service.getCachedSchedule(date: date)
+            } catch {
+                errorText = "Failed to load schedule"
+            }
         }
 
         isLoading = false

@@ -16,13 +16,25 @@ final class ScheduleService {
         
         let (data, _) = try await URLSession.shared.data(from: url)
         // print(String(data: data, encoding: .utf8) ?? "no response")
-
+        
         let decoded = try JSONDecoder().decode(ScheduleResponse.self, from: data)
 
         if decoded.ok {
-            return decoded.schedule
-        } else {
-            return []
+            if let firstLesson = decoded.schedule.first {
+                UserDefaults.standard.set(try? JSONEncoder().encode(decoded), forKey: "schedule\(firstLesson.date)")
+                }
+                return decoded.schedule
+            } else {
+                return []
         }
+    }
+    
+    func getCachedSchedule(date: String) throws -> [Lesson] {
+        guard let data = UserDefaults.standard.data(forKey: "schedule\(date)") else {
+            throw URLError(.badServerResponse)
+        }
+    
+        let decoded = try JSONDecoder().decode(ScheduleResponse.self, from: data)
+        return decoded.schedule
     }
 }
