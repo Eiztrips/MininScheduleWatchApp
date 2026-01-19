@@ -69,20 +69,21 @@ struct ContentView: View {
                     Text(error)
                         .foregroundColor(.red)
                 }
-
+                
                 if !vm.lessons.isEmpty {
                     LazyVStack(spacing: 8) {
                         ForEach(vm.lessons) { lesson in
                             LessonView(lesson: lesson)
                         }
                     }
-                } else {
+                } else if vm.lessons.isEmpty && !vm.isLoading && vm.errorText == nil {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("На этот день пар нет")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
                 }
+                
             }
             .padding()
         }
@@ -98,4 +99,3 @@ struct ContentView: View {
 // #Preview {
 //    ContentView()
 // }
-
