@@ -13,6 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       
+    - name: Create Config.xcconfig
+      run: |
+        echo "API_PASSWORD = SOME_PASSWORD" > Config.xcconfig
+        echo "API_URL = SOME_URL" >> Config.xcconfig
+
     - name: Build
       run: |
         xcodebuild build \
