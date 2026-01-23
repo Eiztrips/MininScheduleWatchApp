@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA822F9F2F2018CD00221736 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA822F9E2F2018CD00221736 /* Config.xcconfig */; };
+		BA822FA02F2018CD00221736 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA822F9E2F2018CD00221736 /* Config.xcconfig */; };
+		BA822FA22F201B4C00221736 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA822FA12F201B4C00221736 /* Config.xcconfig */; };
+		BA822FA32F201B4C00221736 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA822FA12F201B4C00221736 /* Config.xcconfig */; };
 		BADCCD8B2F1CD72800518444 /* MininSchedule Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BADCCD8A2F1CD72800518444 /* MininSchedule Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BA822F9E2F2018CD00221736 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		BA822FA12F201B4C00221736 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BADCCD842F1CD72800518444 /* MininSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MininSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADCCD8A2F1CD72800518444 /* MininSchedule Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MininSchedule Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,8 +67,10 @@
 		BADCCD7D2F1CD72800518444 = {
 			isa = PBXGroup;
 			children = (
+				BA822F9E2F2018CD00221736 /* Config.xcconfig */,
 				BADCCD8E2F1CD72800518444 /* MininSchedule Watch App */,
 				BADCCD852F1CD72800518444 /* Products */,
+				BA822FA12F201B4C00221736 /* Config.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +170,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA822FA32F201B4C00221736 /* Config.xcconfig in Resources */,
+				BA822FA02F2018CD00221736 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +179,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA822F9F2F2018CD00221736 /* Config.xcconfig in Resources */,
+				BA822FA22F201B4C00221736 /* Config.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +207,7 @@
 /* Begin XCBuildConfiguration section */
 		BADCCD952F1CD72A00518444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA822F9E2F2018CD00221736 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -256,6 +269,7 @@
 		};
 		BADCCD962F1CD72A00518444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA822F9E2F2018CD00221736 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -303,21 +317,25 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
 		BADCCD982F1CD72A00518444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA822FA12F201B4C00221736 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Config.xcconfig\"";
 				DEVELOPMENT_TEAM = 7Y5CP46WK8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MininSchedule-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MininSchedule;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -344,15 +362,18 @@
 		};
 		BADCCD992F1CD72A00518444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA822F9E2F2018CD00221736 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Config.xcconfig\"";
 				DEVELOPMENT_TEAM = 7Y5CP46WK8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MininSchedule-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MininSchedule;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -380,6 +401,7 @@
 		};
 		BADCCD9C2F1CD72A00518444 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA822F9E2F2018CD00221736 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +421,7 @@
 		};
 		BADCCD9D2F1CD72A00518444 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA822F9E2F2018CD00221736 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;

@@ -70,7 +70,7 @@ struct ContentView: View {
                         .foregroundColor(.red)
                 }
                 
-                if !vm.lessons.isEmpty {
+                if !vm.lessons.isEmpty && vm.errorText == nil {
                     LazyVStack(spacing: 8) {
                         ForEach(vm.lessons) { lesson in
                             LessonView(lesson: lesson)

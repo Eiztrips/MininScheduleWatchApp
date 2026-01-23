@@ -9,8 +9,21 @@ import Foundation
 
 final class ScheduleService {
     func fetchSchedule(group: String, date: String) async throws -> [Lesson] {
-        let urlString = "https://eiztrips.dev/api/schedule/\(group)/\(date)"
-        guard let url = URL(string: urlString) else {
+        guard
+            let apiPassword = Bundle.main.object(forInfoDictionaryKey: "API_PASSWORD") as? String,
+            let apiBaseURL = Bundle.main.object(forInfoDictionaryKey: "API_URL") as? String
+        else {
+            throw URLError(.userAuthenticationRequired)
+        }
+
+        guard var components = URLComponents(string: "https://\(apiBaseURL)/api/schedule/\(group)/\(date)") else {
+            throw URLError(.badURL)
+        }
+        components.queryItems = [
+            URLQueryItem(name: "password", value: apiPassword)
+        ]
+
+        guard let url = components.url else {
             throw URLError(.badURL)
         }
         
@@ -38,3 +51,4 @@ final class ScheduleService {
         return decoded.schedule
     }
 }
+
